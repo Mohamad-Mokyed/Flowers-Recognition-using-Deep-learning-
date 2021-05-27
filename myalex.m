@@ -1,6 +1,7 @@
 alex = alexnet; % loading alexnet CNN
 layers = alex.Layers; % assigning the layers of Alexnet to a variable
 %% Modify the network to use five categories
+%%daisy dandelion  rose  sunflower  tulip
 layers(23) = fullyConnectedLayer(5); % modifying the fully connected layer for five
 layers(25) = classificationLayer
 clear alex; % free up some memory
